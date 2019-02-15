@@ -132,7 +132,7 @@ contract WarehouseContract {
     }
 
     // called by trader to retrieve true loaded bags
-    function getTruckBags(uint truckID) public view /*onlyTrader()*/ returns (uint[] memory) {
+    function getTruckBags(uint truckID) public view /*onlyTrader*/ returns (uint[] memory) {
         return truckBagsMap[truckID];
     }
 

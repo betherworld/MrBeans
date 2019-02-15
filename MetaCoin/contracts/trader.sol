@@ -34,6 +34,7 @@ contract TraderContract {
 
     event invalidTruck();
     event unidentifiedBags();
+    event lostBags();
 
     /************************************** R E G I S T E R ***********************************/
 
@@ -41,14 +42,14 @@ contract TraderContract {
         traders.push(trader);
     }
 
-    function deRegisterTrader(uint traderID) public payable onlyPeterson {
+    /*function deRegisterTrader(uint traderID) public payable onlyPeterson {
         for (uint i = 0; i<traders.length; i++)
         {
             if (traders[i].id == traderID) {
                 delete traders[i];
             }
         }
-    }
+    }*/
 
     /****************************** E N T R Y    P O I N T **************************************/
 
@@ -69,9 +70,13 @@ contract TraderContract {
                 }
             }
         }
-        if (bags.length != count) {
+        if (bags.length != count || bags.length < RFIDs.length) {
             emit unidentifiedBags();
         }
+        if (bags.length > RFIDs.length) {
+            emit lostBags();
+        }
+
     }
 
     /****************************** P R O C E S S I N G **************************************/
