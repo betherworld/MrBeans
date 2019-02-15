@@ -113,5 +113,5 @@ tc.verifyTruck(truckID_1, receivedBags, {from: traderAddr})
 // during transport a "lostBags" event would be raised.
 let loadedBags_2 = [2143, 1213, 5567]
 wc.loadBagsOnTruck(warehouseID, truckID_1, loadedBags_2, {from: warehouseAddr})
-let receivedBags_2 = [2143, 1213, 5567, 0303]
+let receivedBags_2 = [2143, 1213, 5567, 303]
 tc.verifyTruck(truckID_1, receivedBags_2, {from: traderAddr})
