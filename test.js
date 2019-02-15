@@ -88,6 +88,7 @@ wc.assignRFID(warehouseID, RFIDs[1], cropData, {from: warehouseAddr})
 wc.assignRFID(warehouseID, RFIDs[2], cropData, {from: warehouseAddr})
 wc.assignRFID(warehouseID, RFIDs[3], cropData, {from: warehouseAddr})
 wc.assignRFID(warehouseID, RFIDs[4], cropData, {from: warehouseAddr})
+wc.assignRFID(warehouseID, RFIDs[5], cropData, {from: warehouseAddr})
 
 // at exit point of warehouse bags are loaded on some truck.
 // Loaded bags are assigned to a truck on blockchain as well.
